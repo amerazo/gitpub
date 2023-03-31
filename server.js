@@ -2,12 +2,23 @@
 //-----------Enable Express --------------------------//
 const express = require('express');
 const app = express();
+const drinks = require("./models/drinks");
+const foods = require("./models/food");
+app.set('view engine', 'ejs');
+
 
 //----------Welcome Route ----------------------------//
 //----------Welcome Route ----------------------------//
 app.get('/', (req, res) => {
-    res.send('Welcome to the Gitpub App');
+    res.render('Welcome to the Gitpub App');
 });
+
+//----------Drinks Route ----------------------------//
+//----------Drinks Route ----------------------------//
+app.get("/drinks", (req, res)=>{
+    res.render("drinks_index.ejs", {drinks}) 
+
+})
 
 //-----------Listen for Server------------------------//
 //-----------Listen for Server------------------------//
