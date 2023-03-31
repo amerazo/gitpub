@@ -10,10 +10,21 @@
     <h1> Welcome to GitPub! I hope you enjoy the site!</h1>
     <style type="text/css">
         body {
-          color: yellow;
-          background-color: steelblue;
+          color: red;
+          background-color: lightblue;
+          font-size: 23px;
+          text-align: left;
         }
       </style>
+
+<ul><h2>DRINKS</h2>
+    <% for (let i = 0; i < drinks.length ; i++){ %>
+        <li>
+            <% let drink = drinks[i].name.slice(0,1).toUpperCase() + drinks[i].name.slice(1); %>
+            <h3>Drink name: <a href = "/drinks/<%= i %>"><%= drink %></a></h3>
+        </li>
+   <% } %>
+  </ul>
 </body>
 </html>
 
