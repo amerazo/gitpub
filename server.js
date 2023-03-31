@@ -20,6 +20,13 @@ app.get("/drinks", (req, res)=>{
 
 })
 
+//----------Drinks ID Route --------------------------//
+//----------Drinks ID Route ---------------------- ---//
+app.get("/drinks/:id", (req, res)=>{
+    let drink = drinks[req.params.id];
+    res.render("drinks_show", {drink});
+})
+
 //-----------Listen for Server------------------------//
 //-----------Listen for Server------------------------//
 app.listen(3000, () => {
