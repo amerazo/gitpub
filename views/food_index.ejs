@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <h1> Welcome to GitPub! I hope you enjoy the site!</h1>
+        <style type="text/css">
+        body {
+          color: red;
+          background-color: lightblue;
+          font-size: 23px;
+          text-align: left;
+        }
+      </style>
+
+<body>
+    <ul>FOOD
+        <% for (let i = 0; i < foods.length ; i++){ %>
+            <li>
+                <% let food = foods[i].name.slice(0,1).toUpperCase() + foods[i].name.slice(1); %>
+                <h3>Item: <a href = "/foods/<%= i %>"><%= food %></a></h3>
+            </li>
+       <% } %>
+      </ul>
+     
+    
+</body>
+</html>
