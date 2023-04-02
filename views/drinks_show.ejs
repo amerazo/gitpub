@@ -4,9 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title><% drink.name %></title>
+    <style type="text/css">
+        body {
+          color: red;
+          background-color: lightblue;
+          font-size: 23px;
+          text-align: left;
+        }
+      </style>
 </head>
 <body>
-    <h1>test</h1>
+    <h1>At Foo Bar</h1>
+    <h2><%= drink.name%></h2>
+    <img src="<%= drink.image.replace('jpg', 'png')%>" alt = "drink image", width = 150px>
+    <h3>Drink Price <%= drink.price %></h3>
+    <a href = "/drinks">Back</a>
+    
 </body>
 </html>

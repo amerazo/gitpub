@@ -24,7 +24,7 @@ app.get("/drinks", (req, res)=>{
 //----------Drinks ID Route ---------------------- ---//
 app.get("/drinks/:id", (req, res)=>{
     let drink = drinks[req.params.id];
-    res.render("drinks_show", {drink});
+    res.render("drinks_show.ejs", {drink});
 })
 
 //-----------Listen for Server------------------------//
